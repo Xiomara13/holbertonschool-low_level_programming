@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-int main() {
+/**
+ * main - Entry point
+ * Return: 0
+ */
+int main(void) {
     printf("size of a char: %zu bytes\n", sizeof(char));
     printf("size of a int: %zu bytes\n", sizeof(int));
 	printf("size of a long int: %zu bytes\n", sizeof(long int));
