@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void) {
+int main() {
     srand(time(0));  // Inicializar la semilla para generar números aleatorios
 
     int n = rand() % 201 - 100;  // Generar un número aleatorio entre -100 y 100
