@@ -5,18 +5,24 @@
  * main - Entry point
  * Return: 0
  */
-int main(void) {
-	srand(time(0));  // Inicializar la semilla para generar números aleatorios
+int main(void) 
+{
+	srand(time(0));  /* Inicializar la semilla para generar números aleatorios*/
 
-	int n = rand() % 201 - 100;  // Generar un número aleatorio entre -100 y 100
+	int n = rand() % 201 - 100;  /* Generar un número aleatorio entre -100 y 100*/
 
 	printf("El número %d es ", n);
 
-	if (n > 0) {
+	if (n > 0) 
+	{
 		printf("positivo\n");
-	} else if (n < 0) {
+	}
+	else if (n < 0)
+	{
 		printf("negativo\n");
-	} else {
+	} 
+	else 
+	{
 		printf("cero\n");
 	}
 
