@@ -13,19 +13,17 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* Generar un número aleatorio entre -100 y 100*/
 
-	printf("El número %d es ", n);
-
 	if (n > 0)
 	{
-		printf("positivo\n");
+		printf("%d is positive\n", n);
 	}
 	else if (n < 0)
 	{
-		printf("negativo\n");
+		printf("%d is negative\n", n);
 	}
 	else
 	{
-		printf("cero\n");
+		printf("%d is zero\n", n);
 	}
 
 	return (0);
