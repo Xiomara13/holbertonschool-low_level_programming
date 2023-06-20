@@ -1,34 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/**
+ * main - entry point
+ * Return: 0
+ */
 int main(void)
 {
-	srand(time(0));  // Inicializar la semilla para generar números aleatorios
+	int n;
+	int digit;
 
-	int n = rand();  // Generar un número aleatorio
-
-	printf("Último dígito de %d es ", n);
-
-	int ultimoDigito = n % 10;
-
-	printf("%d ", ultimoDigito);
-
-	printf("y es ");
-
-	if (ultimoDigito > 5)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	digit = n % 10;
+	if (digit > 5)
 	{
-		printf("mayor que 5\n");
-    }
-	else if (ultimoDigito == 0)
-	{
-		printf("0\n");
-    }
-	else
-	{
-		printf("menor que 6 y no 0\n");
-    }
 
-    return 0;
+		printf("Last digit of %d is %d and is greater than 5\n", n, digit);
+	}
+	if (digit == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, digit);
+	}
+	if (digit < 6 && digit != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, digit);
+	}
+	return (0);
 }
-
