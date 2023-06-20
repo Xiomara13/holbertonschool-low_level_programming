@@ -9,6 +9,7 @@ int main(void)
 {
 	/* Inicializar la semilla para generar números aleatorios*/
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* Generar un número aleatorio entre -100 y 100*/
