@@ -7,9 +7,10 @@
  */
 int main(void)
 {
-	srand(time(0));
 	/* Inicializar la semilla para generar números aleatorios*/
-	int n = rand() % 201 - 100;
+	int n;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 	/* Generar un número aleatorio entre -100 y 100*/
 
 	printf("El número %d es ", n);
