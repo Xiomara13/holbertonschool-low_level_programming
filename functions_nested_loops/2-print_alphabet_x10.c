@@ -7,19 +7,18 @@
 void print_alphabet_x10(void)
 {
 	/*Code to print the alphabet 10 times*/
-	char letter;
+	char letter[] = "abcdefghijklmnñopqrstuvwxyz\n";
 	int i;
-	int j;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j <26; j++)
+		int j = 0;
+
+		while (letter[j] != '\0')
 		{
-			_putchar(letter);
-			letter++;
-			}
-		letter = 'a';
-		/*Reset the letter to 'a' for the next line*/
+			_putchar(letter[j]);
+			j++;
+		}
 	}
 	_putchar('\n');
 }
