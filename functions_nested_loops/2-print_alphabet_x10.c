@@ -7,14 +7,16 @@
 void print_alphabet_x10(void)
 {
 	/*Code to print the alphabet 10 times*/
-	char letter;
 	int i;
+	char letter;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (letter = 'a'; letter <= 'z';)
-		_putchar(letter);
-			letter++;
+		letter = 'a';
+		while (letter <= 'z')
+		{
+		_putchar(letter++);
+		}
 	}
 	_putchar('\n');
 }
