@@ -1,0 +1,7 @@
+CC=gcc
+
+all: school
+
+main: school.c
+
+	$(CC) main.c  $(main) -o $(all)
