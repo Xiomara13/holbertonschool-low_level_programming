@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include "main.h"
 /**
+ *
  * print_triangle - print a triangle
  * @size: the size of the triangle
  */
+void _putchar(char c)
+{
+	putchar(c);
+}
 void print_triangle(int size)
 {
 	int i, j;
