@@ -1,17 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
  * print_triangle - print a triangle
  * @size: the size of the triangle
  */
-void _putchar(char c)
-{
-	putchar(c);
-}
 void print_triangle(int size)
 {
-	int i, j;
+	int i, j, k;
 
 	if (size <= 0)
 	{
@@ -20,7 +15,11 @@ void print_triangle(int size)
 	}
 	for (i = 1; i <= size; i++)
 	{
-		for (j = 0; j < i; j++)
+		for (j = 1; j <= size - i; j++)
+		{
+			putchar(' ');
+		}
+		for (k = 1; k <= i; k++)
 		{
 			putchar('#');
 		}
