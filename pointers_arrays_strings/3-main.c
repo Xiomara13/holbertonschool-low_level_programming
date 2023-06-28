@@ -1,5 +1,7 @@
 #include "main.h"
 
+#include <stdio.h>
+
 
 
 /**
@@ -16,14 +18,18 @@ int main(void)
 
 {
 
-	    char *str;
+	    char *s = "hello, world";
+
+	        char *f = "oleh";
+
+		    unsigned int n;
 
 
 
-	        str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+		        n = _strspn(s, f);
 
-		    _puts(str);
+			    printf("%u\n", n);
 
-		        return (0);
+			        return (0);
 
 }

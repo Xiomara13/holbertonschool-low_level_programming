@@ -12,12 +12,11 @@ int _atoi(char *s)
 	int sign = 1;
 	int result = 0;
 	int i = 0;
-	/*Skip leading whitespace*/
+
 	while (s[i] == ' ')
 	{
 		i++;
 	}
-	/*Check for a sign*/
 	if (s[i] == '+' || s[i] == '-')
 	{
 		if (s[i] == '-')
@@ -26,11 +25,10 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	/*Convert digits to integer*/
 	while (s[i] >= '0' && s[i] <= '9')
 	{
 		int digit = s[i] - '0';
-		/*Check for overflow*/
+
 		if (result > INT_MAX / 10)
 			if (result == INT_MAX / 10 && digit > INT_MAX % 10)
 		{

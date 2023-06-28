@@ -1,5 +1,4 @@
 #include "main.h"
-
 #include <stdio.h>
 
 
@@ -18,18 +17,24 @@ int main(void)
 
 {
 
-	    char *str;
+	    char *s = "hello";
 
-	        int len;
+	        char *f;
 
 
 
-		    str = "My first strlen!";
+		    f = _strchr(s, 'l');
 
-		        len = _strlen(str);
 
-			    printf("%d\n", len);
 
-			        return (0);
+		        if (f != NULL)
+
+				    {
+
+					            printf("%s\n", f);
+
+						        }
+
+			    return (0);
 
 }

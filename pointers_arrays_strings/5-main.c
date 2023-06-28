@@ -18,16 +18,18 @@ int main(void)
 
 {
 
-	    char s[10] = "My School";
+	    char str[] = "Look up!\n";
+
+	        char *ptr;
 
 
 
-	        printf("%s\n", s);
+		    ptr = string_toupper(str);
 
-		    rev_string(s);
+		        printf("%s", ptr);
 
-		        printf("%s\n", s);
+			    printf("%s", str);
 
-			    return (0);
+			        return (0);
 
 }
