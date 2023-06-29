@@ -15,10 +15,15 @@ void print_diagsums(int *a, int size)
 	{
 		sum1 += *(a + i * size + i);
 		sum2 += *(a + i * size + (size - 1 - i));
+		if (i < size - 1)
+		{
+			printf("%d, ", sum1);
+			printf("%d, ", sum2);
 	}
-	printf("%d, ", sum1);
-	printf("%d, ", sum2);
-	{
-		printf("\n");
+		else
+		{
+			printf("%d\n", sum1);
+			printf("%d\n", sum2);
+		}
 	}
 }
