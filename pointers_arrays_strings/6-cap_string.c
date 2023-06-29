@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 #include "main.h"
 /**
  * cap_string - capitalizes all words of a string
@@ -9,26 +10,22 @@
 char *cap_string(char *str)
 {
 	int capitalize = 1;
+	char *ptr = str;
+	char delimiters[] = " \n\t-.";
 
-	while (*str != '\0')
+	while (*ptr)
 	{
-		if (capitalize && islower(*str))
+		if (capitalize && islower(*ptr))
 		{
-			*str = toupper(*str);
+			*ptr = toupper(*ptr);
 		}
-		if (*str == ' ' || *str == '\t' || *str == '\n' ||
-				*str == ',' || *str == ';' || *str == '.' ||
-				*str == '!' || *str == '?' || *str == '"' ||
-				*str == '(' || *str == ')' || *str == '{' ||
-				*str == '}')
+		capitalize = 0;
+
+		if (strchr(delimiters, *ptr) != NULL)
 		{
 			capitalize = 1;
 		}
-		else
-		{
-			capitalize = 0;
-		}
-		str++;
+		ptr++;
 	}
 	return (str);
 }
