@@ -1,1 +1,1 @@
-cero
+array of chars

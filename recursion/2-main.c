@@ -18,18 +18,14 @@ int main(void)
 
 {
 
-	    char *s = "hello, world";
-
-	        char *f = "world";
-
-		    char *t;
+	    int n;
 
 
 
-		        t = _strpbrk(s, f);
+	        n = _strlen_recursion("Corbin Coleman");
 
-			    printf("%s\n", t);
+		    printf("%d\n", n);
 
-			        return (0);
+		        return (0);
 
 }

@@ -16,14 +16,8 @@ int main(void)
 
 {
 
-	    char *str;
+	    _print_rev_recursion("\nColton Walker");
 
-
-
-	        str = "0123456789";
-
-		    puts2(str);
-
-		        return (0);
+	        return (0);
 
 }
