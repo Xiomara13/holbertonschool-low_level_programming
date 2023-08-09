@@ -27,11 +27,17 @@ int main(int ac, char **av)
 		close(fds[0]), ERROR("Error: Can't write to %s\n", av[2]);
 
 	while ((n = read(fds[0], buffer, sizeof(buffer))) > 0)
+	{
 		if (write(fds[1], buffer, n) == -1 || n != write(fds[1], buffer, n))
-			close(fds[0]), close(fds[1]), ERROR("Error: Can't write to %s\n", av[2]);
-
+		{
+			close(fds[0]);
+			close(fds[1]);
+			ERROR("Error: can't write to %s\n", av[2]);
+		}
+	}
 	if (n == -1)
 		close(fds[0]), close(fds[1]), ERROR("Error: Can't read from %s\n", av[1]);
+
 	if (close(fds[0]) == -1 || close(fds[1]) == -1)
 		ERROR("Error: Can't close fd %d\n", fds[0] == -1 ? fds[1] : fds[0]);
 	return (0);
